@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Translation Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a1918;
+            color: #e5e5e5;
+        }
+        .test-box {
+            background: #2a2928;
+            border: 1px solid #3a3938;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #7A9D8F;
+        }
+        .tamil-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+        button {
+            background: linear-gradient(135deg, #7A9D8F, #9FB8AD);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #result {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌐 Tamil Translation Test</h1>
+    
+    <div class="test-box">
+        <h2>✅ Static Tamil Text (Proof it works in browser):</h2>
+        <p class="tamil-text">
+            வணக்கம்! நீங்கள் எப்படி இருக்கிறீர்கள்?<br>
+            உள்ளூர் சுழல் முழுமையாக முடிகிறது, ஆனால் வெளிப்புற மாறி எப்போது புதுப்பிக்கப்படுகிறது என்று எனக்கு குழப்பமாக இருக்கிறது.
+        </p>
+    </div>
+
+    <div class="test-box">
+        <h2>🔄 Live API Test:</h2>
+        <button onclick="testTranslation('ta')">Test Tamil Translation</button>
+        <button onclick="testTranslation('hi')">Test Hindi Translation</button>
+        <button onclick="testTranslation('es')">Test Spanish Translation</button>
+        <div id="result" class="tamil-text"></div>
+    </div>
+
+    <script>
+        async function testTranslation(lang) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('http://localhost:5000/api/translate/concept', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8'
+                    },
+                    body: JSON.stringify({
+                        concept: "The inner loop completes fully, but I'm confused about when the outer variable updates.",
+                        targetLanguage: lang,
+                        culturalContext: lang === 'ta' || lang === 'hi'
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+<strong>✅ Translation to ${lang.toUpperCase()}:</strong>\n
+${data.translation}
+                    `;
+                } else {
+                    resultDiv.innerHTML = '❌ Translation failed: ' + data.error;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '❌ Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
