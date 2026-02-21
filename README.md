@@ -1,4 +1,4 @@
-# 🎓 SkillDashboard: AI-Powered Educational Intelligence Platform
+# 🎓Cognivara: AI-Powered Educational Intelligence Platform
 
 > **AMD Hackathon 2026** | Next-Generation Adaptive Learning System with Anti-Cheat Intelligence
 
@@ -25,7 +25,7 @@
 
 ## 🎯 Project Overview
 
-SkillDashboard is an **AI-powered educational intelligence platform** that revolutionizes online learning through personalized, culturally-aware, and anti-cheat mechanisms. Built for the AMD Hackathon 2026, it addresses critical challenges in digital education:
+Cognivara is an **AI-powered educational intelligence platform** that revolutionizes online learning through personalized, culturally-aware, and anti-cheat mechanisms. Built for the AMD Hackathon 2026, it addresses critical challenges in digital education:
 
 - **Problem**: Traditional e-learning lacks personalization, cultural context, and integrity verification
 - **Solution**: AI-driven adaptive learning with Socratic questioning, multilingual concept translation, and oral defense validation
