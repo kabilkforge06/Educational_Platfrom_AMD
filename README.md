@@ -43,7 +43,7 @@ Cognivara is an **AI-powered educational intelligence platform** that revolution
 
 ## 🎯 Complete System Flow
 
-### How Users Interact with SkillDashboard (Full Feature Set)
+### How Users Interact with Cognivara (Full Feature Set)
 
 ```
 🧑‍🎓 STUDENT STARTS HERE
