@@ -699,10 +699,9 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 ## 📞 Contact & Support
 
 - **Team**: AMD Hackathon 2026 Participants
-- **Email**: skilldashboard@team.com
-- **GitHub**: [github.com/your-org/skilldashboard](https://github.com/your-org/skilldashboard)
-- **Documentation**: [docs.skilldashboard.com](https://docs.skilldashboard.com)
+- **Email**: teamtechthrills@gmail.com
+
 
 ---
 
-*Built with ❤️ for the future of education | AMD Hackathon 2026*
+*AMD Hackathon 2026*
